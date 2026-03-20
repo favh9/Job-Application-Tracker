@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Apps
+    'applications.apps.ApplicationsConfig',
 ]
 
 MIDDLEWARE = [
@@ -121,3 +123,12 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Media (docx, pdf)
+# https://docs.djangoproject.com/en/4.2/topics/files/
+# https://docs.djangoproject.com/en/4.2/ref/models/fields/#filefield
+# https://docs.djangoproject.com/en/4.2/ref/settings/#media-root
+# https://docs.djangoproject.com/en/4.2/howto/static-files/#serving-files-uploaded-by-a-user-during-development
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
