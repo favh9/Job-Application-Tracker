@@ -1,7 +1,7 @@
-from django.urls import path
+from .views import ApplicationModelViewSet
+from rest_framework.routers import DefaultRouter
 
-from . import views
+router = DefaultRouter()
+router.register(r'', ApplicationModelViewSet, basename='application')
 
-urlpatterns = [
-    path("", views.index, name="index"),
-]
+urlpatterns = router.urls
