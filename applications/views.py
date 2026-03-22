@@ -1,5 +1,13 @@
-from django.http import HttpResponse
+from rest_framework import viewsets
+from .models import JobApplication
+from .serializers import ApplicationSerializer
 
 
-def index(request):
-    return HttpResponse("Hello, world. You're at the applications index.")
+class ApplicationModelViewSet(viewsets.ModelViewSet):
+    queryset = JobApplication.objects.all()
+    serializer_class = ApplicationSerializer
+        
+        
+        
+
+
